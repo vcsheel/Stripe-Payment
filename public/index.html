@@ -1,0 +1,28 @@
+<html>
+    <body>
+    <div align="center">
+        <form action='/charge' method='post'>
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_5GOcKSxsfVUoaHC44EeHJhbT"
+                data-amount="300"
+                data-name="massage"
+                data-description="deep massage"
+                data-locale="auto"
+                data-currency="usd"
+            >
+            </script>
+            <input type="hidden" name="chargeAmount" value="300"/><br><br>
+            <input type="button" value="LOg" onclick="logDetails()">
+        </form>
+        <script type="text/javascript">
+            function logDetails(){
+                document.write(myPay.getAmount()+" "+myPay.getMassageType());
+
+                
+            }
+        </script>
+    </div>
+    </body>
+</html>
